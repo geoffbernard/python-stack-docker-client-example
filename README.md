@@ -13,12 +13,17 @@ Go to http://localhost:5601 and log into kibana to see apm data (and other sampl
 If APM dashboards are not present, consider logging into the APM container and manually running the APM dashboard command:
 
 (to tunnel into APM container):
- docker exec -it pythonstackdocker_web_1 /bin/bash
+docker exec -it pythonstackdocker_apm_1 /bin/bash
 
 (within bash):
 ./apm-server setup -E setup.kibana.host=kibana:5601
 
 
+
+--------------------------------
+separate note: for python, one could mount local file, but opted to be able to tunnel in:
+(to tunnel into python):
+docker exec -it pythonstackdocker_web_1 sh
 
 
 
